@@ -1,0 +1,181 @@
+/* * {
+    font-family: "Roboto", sans-serif;
+    padding: 0;
+    margin: 0;
+    margin-top: 20px;
+  
+  }
+   */
+  .ui.cards > .card > .image {
+    height: 250px;
+    margin-top: 20px;
+  
+    padding-bottom: 20px;
+    background: #fff;
+  
+  }
+  .ui.cards > .card > .image > img {
+    height: 100%;
+    max-width: 100%;
+    width: auto;
+  }
+  .ui.cards > .card > .content > .header {
+    height: 48px;
+    overflow: hidden;
+    margin-bottom: 5px;
+  }
+  .ui.cards > .card > .content > .description {
+    height: 36px;
+    margin-bottom: 0px;
+    overflow: hidden;
+  }
+  .ui.cards > .card .meta.price {
+    margin-bottom: 5px;
+    font-size: 18px;
+    color: #333;
+    font-weight: 600;
+  }
+  
+  .ui.cards > .card .meta.price > a {
+    font-size: 1.3rem;
+    color: #222;
+  }
+  
+  .ui.menu.fixed {
+    height: 80px;
+    padding: 15px;
+    background-color:rgb(37, 37, 37) ;
+    color: white;
+  
+  }
+  
+  .ui.grid.container {
+    margin-top: 45px;
+    width: 100%;
+  }
+  
+  .ui.grid > .row {
+    background: #fff;
+  }
+  .ui.grid > .row > .column.lp {
+    padding: 20px 40px 20px 20px;
+    align-self: flex-start !important;
+  }
+  .ui.grid > .row > .column.rp {
+    padding: 20px 20px 20px 40px;
+    text-align: left;
+    align-self: flex-start !important;
+  }
+  
+  .ui.grid > .row > .column > img,
+  .ui.grid > .row > img {
+    height: 100%;
+  }
+  .ui.placeholder .header:not(:first-child):before,
+  .ui.placeholder .image:not(:first-child):before,
+  .ui.placeholder .paragraph:not(:first-child):before {
+    display: none;
+  }
+  
+  .ui.label,
+  .ui.labels .label {
+    font-size: 22px;
+  }
+  
+  .column.rp h1 {
+    color: #333;
+  }
+  .column.rp p {
+    font-size: 18px;
+    color: #777;
+  }
+  .ui.placeholder.segment .column .button,
+  .ui.placeholder.segment .column .field,
+  .ui.placeholder.segment .column textarea,
+  .ui.placeholder.segment .column > .ui.input {
+    background-color: white;
+    border: 1px solid #ff3e6c;
+    color: #fff;
+    font-size: 18px;
+    margin-left: 0;
+  }
+  
+  #root > div > div.ui.fixed.menu > li {
+    list-style-type: none;
+    margin-right: 40px;
+   
+  }
+  
+  .logout{
+    border-radius: 10px;
+    padding: 5px;
+    
+  
+  }
+  
+  .errors{
+    padding: 10px;
+    color: red;
+  }
+  
+  /* .login{
+    background-image: url('https://images.pexels.com/photos/14020091/pexels-photo-14020091.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    height: 100vh;
+  
+  } */
+  
+  .card{
+    box-shadow: 15px 15px 15px 15px rgba(39, 39, 39, 0.486);
+  }
+  
+  
+  
+  
+  
+  /* CSS */
+  .button-25 {
+    background-color: #36A9AE;
+    background-image: linear-gradient(#37ADB2, #329CA0);
+    border: 1px solid #2A8387;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0 1px 1px;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: block;
+    font-family: -apple-system,".SFNSDisplay-Regular","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 17px;
+    line-height: 100%;
+    margin: 0;
+    outline: 0;
+    padding: 11px 15px 12px;
+    text-align: center;
+    transition: box-shadow .05s ease-in-out,opacity .05s ease-in-out;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 100%;
+  }
+  
+  .button-25:hover {
+    box-shadow: rgba(255, 255, 255, 0.3) 0 0 2px inset, rgba(0, 0, 0, 0.4) 0 1px 2px;
+    text-decoration: none;
+    transition-duration: .15s, .15s;
+  }
+  
+  .button-25:active {
+    box-shadow: rgba(0, 0, 0, 0.15) 0 2px 4px inset, rgba(0, 0, 0, 0.4) 0 1px 1px;
+  }
+  
+  .button-25:disabled {
+    cursor: not-allowed;
+    opacity: .6;
+  }
+  
+  .button-25:disabled:active {
+    pointer-events: none;
+  }
+  
+  .button-25:disabled:hover {
+    box-shadow: none;
+  }
+

@@ -1,0 +1,32 @@
+.dashboard-nav{
+    z-index: +10000;
+  
+}
+.side-menu{
+    margin-top: 160px;
+    position: fixed;
+}
+
+.userstable{
+    margin-top: 200px;
+ 
+}
+
+
+.userstable ,tr, th{
+color: white;
+}
+
+.adduser-btn{
+    margin-left: 950px;
+    margin-bottom: -100px;
+    
+}
+
+.userstable h6 {
+    color: white;
+}
+
+.backColor{
+    background-color: white;
+}
