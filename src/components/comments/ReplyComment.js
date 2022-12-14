@@ -71,8 +71,9 @@ const validate = (values) => {
 
 
   return (
-    <div className="add-comment">
-      <div className="profile-pic"></div>
+    <div className="add-comment" style={{backgroundColor:'black'}}>
+    <img src={'https://th.bing.com/th/id/R.6b0022312d41080436c52da571d5c697?rik=ejx13G9ZroRrcg&riu=http%3a%2f%2fpluspng.com%2fimg-png%2fuser-png-icon-young-user-icon-2400.png&ehk=NNF6zZUBr0n5i%2fx0Bh3AMRDRDrzslPXB0ANabkkPyv0%3d&risl=&pid=ImgRaw&r=0'} style={{width:'80px', borderRadius:'50%', height:'80px'}}/>
+
       <form onSubmit={submitForm} >
         <input type='hidden' name="game_id" value={id}></input>
         <input type='hidden' name="user_id" value={sessionStorage.getItem('id')}></input>

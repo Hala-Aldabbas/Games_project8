@@ -247,4 +247,11 @@ font-size:120px;
       -webkit-box-shadow: 0 0 9px 3px rgba(226, 30, 228, 0.5);
       box-shadow: 0 0 9px 3px rgba(226, 30, 228, 0.5);
   }
-  
+
+  .set-bg{
+    height: 700px;
+  }
+
+  .intro-section p{
+    text-align: justify;
+  }

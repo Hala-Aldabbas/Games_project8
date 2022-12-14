@@ -39,7 +39,7 @@ function Comments() {
           console.log(response.data);
           getUse();
       });
-    
+      alert("Are you sure you want to Delete your comment ?"); 
   }
   
   
@@ -116,6 +116,8 @@ function Comments() {
   <tbody >{comments.map((comment, key) =>
 
 <tr key={key}> 
+{/* <th scope="row">{comment.id}</th> */}
+
 <th scope="row">{comment.game_name}</th>
 <td>{comment.comment}</td>
 <td>{comment.name}</td>

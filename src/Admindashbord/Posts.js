@@ -26,7 +26,7 @@ const [posts, setposts] = useState([]);
 ///show data
 
   function getUse() {
-    axios.get(`http://localhost/ApiRedux/admin.php`).then(function(response) {
+    axios.get(`http://localhost/ApiRedux/post.php`).then(function(response) {
         console.log(response.data);
         setposts(response.data);
     });
@@ -35,11 +35,11 @@ const [posts, setposts] = useState([]);
 /////delete
 
 const deleteUser = (id) => {
-    axios.delete(`http://localhost/ApiRedux/admin.php/${id}/delete`).then(function(response){
+    axios.delete(`http://localhost/ApiRedux/post.php/${id}/delete`).then(function(response){
         console.log(response.data);
         getUse();
     });
-  
+    alert("Are you sure you want to Delete this post ?"); 
 }
 
 

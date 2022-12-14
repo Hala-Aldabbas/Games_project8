@@ -118,7 +118,7 @@ const Register = () => {
 
         <div className="row mb-0">
         <div className="col-md-6 offset-md-4">
-        <button type="submit"  class="form-control btn btn-primary submit px-3" style={{marginLeft:'-40px'}}>
+        <button type="submit"  class="form-control btn btn-light submit px-3" style={{marginLeft:'-40px', borderColor:"white"}}>
            Register
         </button>
         </div>

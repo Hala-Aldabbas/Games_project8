@@ -101,7 +101,7 @@ const showAddFavourite = (e) => {
 
       .then((result) => {
         
-       window.open(`/games/details/${id}`,"_self")
+      //  window.open(`/games/details/${id}`,"_self")
   
       console.log(result);
   
@@ -127,7 +127,7 @@ const showAddFavourite = (e) => {
           window.location.reload(false);
 
         });
-       
+        alert("Are you sure you want to Delete your comment ?"); 
     };
   
 
@@ -183,6 +183,18 @@ const showAddFavourite = (e) => {
 
   }, [id]);
 
+
+
+
+  const x =document.getElementById("box");
+    const changColor=(e)=>{
+        if (x.style.color==='white'){
+            x.style.color='red'
+         }else {
+            x.style.color='white'}
+
+
+    }
   
 
 
@@ -233,10 +245,11 @@ const showAddFavourite = (e) => {
        <form onSubmit={showAddFavourite} >
       <input type='hidden' name="game_id" value={id} onChange={handleChange}></input>
         <input type='hidden' name="user_id" value={sessionStorage.getItem('id')}  onChange={handleChange}></input> 
-      <button className="submit" name="submit" style={{color:'black',border:'1px solid #fff',marginBottom:'30px'}}  onClick={() =>
+        <button style={{border:'none',backgroundColor:'black'}} onClick={changColor}>
+      <button className="submit" name="submit" style={{color:'#fff',border:'1px solid #fff',marginBottom:'30px',backgroundColor:'black'}}  onClick={() =>
               showAddFavourite({game_id:id,user_id:sessionStorage.getItem('id'),game_img:background_image,game_name:name})
-            }>Add To Favourite</button>
-
+            }> <i id="box"  style={{color:"white", cursor:"pointer" }} className="fa fa-heart  hundrad"  />Add To Favourite</button>
+</button>
 </form>
    
       {posts.length > 0
@@ -248,9 +261,9 @@ const showAddFavourite = (e) => {
           <div className="add-comment" style={{display:'flex',flexDirection:'row',marginBottom:'5vh',width:'50%', backgroundColor:'black', color:'#fff'}}>
           
           <img src={item.img} style={{width:'80px', borderRadius:'50%', height:'80px'}}/>
-          <div style={{display:'flex',flexDirection:'column'}}>
-            <h5 style={{color:'#fff',fontSize:'300'}}>{item.name}</h5 >
-            <p style={{color:'#fff'}}>{item.comment}</p>
+          <div style={{display:'flex',flexDirection:'column',marginTop:'-20px'}}>
+            <h5 style={{color:'#fff',fontWeight:'700'}}>{item.name}</h5 >
+            <p style={{color:'#fff',fontSize:'20px'}}>{item.comment}</p>
             <a
             className="reply-btn"
             style={{cursor:'pointer'}}
@@ -278,8 +291,8 @@ const showAddFavourite = (e) => {
             <div className="add-comment" style={{display:'flex',flexDirection:'row',marginBottom:'2vh',width:'45%',marginLeft:'5%', backgroundColor:'black', color:'#fff',marginTop:'-8vh'}}>
             
             <img src={comment.img} style={{width:'60px', borderRadius:'50%', height:'60px'}}/>
-            <div style={{display:'flex',flexDirection:'column'}}>
-              <h5 style={{color:'#fff',fontSize:'300'}}>{comment.name}</h5>
+            <div style={{display:'flex',flexDirection:'column',marginTop:'-10px',marginBottom:'20px'}}>
+              <h5 style={{color:'#fff',fontWeight:'700'}}>{comment.name}</h5>
               <p style={{color:'#fff'}}>{comment.reply_comment}</p>
               <div style={{display:'flex',flexDirection:'row'}}>
               {comment.user_id==sessionStorage.getItem('id')

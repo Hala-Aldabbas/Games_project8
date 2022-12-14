@@ -40,7 +40,7 @@ function Users() {
           console.log(response.data);
           getUse();
       });
-    
+      alert("Are you sure you want to Delete this User ?"); 
   }
   
   

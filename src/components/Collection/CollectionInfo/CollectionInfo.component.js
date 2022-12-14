@@ -8,14 +8,16 @@ const CollectionInfo = ({item}) => {
     <Fragment>
       <h1 className="text-center">{name}</h1>
       <Grid container spacing={3}>
-        <Grid item sm={12} md={6}>
-          <div className="gdetails__description">
+        {/* <Grid item sm={12} md={6}> */}
+          <div className="gdetails__description" style={{ textAlign:'justify' , float:'none'}}
+>
             {typeof description === "string" && parse(description)}
           </div>
-        </Grid>
-        <Grid item sm={12} md={6}>
-          <img src={image_background} alt={name} width="100%" />
-        </Grid>
+        {/* </Grid> */}
+        {/* <Grid item sm={12} md={6}> */}
+          <img style={{ float:'right' , marginTop:'40px' ,marginBottom:'40px'}}
+ src={image_background} alt={name} width="100%" />
+        {/* </Grid> */}
       </Grid>
     </Fragment>
   );

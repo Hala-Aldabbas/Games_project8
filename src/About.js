@@ -109,44 +109,15 @@ function About() {
                 </ul>
               </div>
             </div>
-            <div className="widget-item">
-              <a href=" " className="add">
-                <img src="./img/add.jpg" alt="" />
-              </a>
-            </div>
+           
           </div>
         </div>
       </div>
     </div>
   </section>
   {/* Blog section end */}
-  {/* Intro section */}
-  <section className="intro-video-section set-bg  align-items-end " data-setbg><img src="./img/promo-bg.jpg" alt="#"/>
-    <a href="https://www.youtube.com/watch?v=uFsGy5x_fyQ" className="video-play-btn video-popup"><img src="img/icons/solid-right-arrow.png" alt="#" /></a>
-    <div className="">
-      {/* <div className="d0">
-        <h2 >Promo video of the game</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-      </div> */}
-    </div>
-  </section>
-  {/* Intro section end */}
-  {/* Featured section */}
-  <section className="featured-section">
-    <div className="featured-bg set-bg" data-setbg /><img src="img/featured-bg.jpg" className="featured-bg set-bg"  alt="#"/>
-    <div className="featured-box">
-      <div className="text-box">
-        <div className="top-meta">22.12.2022  /  in <a href>Games</a></div>
-        <h3>The game you’ve been waiting  for is out now</h3>
-        <p>There’s a marked difference between a gaming addiction causing aggression or depression, and an already depressed or troubled person turning to games as a form of escapism.
-
-The research tells us gaming has no harmful impacts on healthy young people who don’t have existing mental health problems.
-
-However, negative forces in life may drive some people towards gaming as a way to cope. Specifically, people who already feel a sense of self blame, loss of control in life or social disengagement are more likely to turn to gaming as a coping mechanism – not unlike how some may turn to drugs, alcohol or gambling.</p>
-   
-      </div>
-    </div>
-  </section>
+ 
+  
 
 
   </div>

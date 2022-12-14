@@ -2,10 +2,12 @@ import React from 'react'
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from 'react-router-dom';
+import Modal from './Modal';
+import './modal.css'
 
 function Userprofile() {
 
-
+  const [isOpen, setIsOpen] = useState(false)
     // const navigate = useNavigate();
 
     const [inputs, setInfo]=useState({
@@ -98,6 +100,35 @@ console.log(Favourites)
 
 
   
+
+
+const goGame = async (id) => {
+  window.open(`/games/details/${id}`,"_self")  
+   
+
+};
+
+
+
+const [currentPage, setCurrentPage] = useState(1);
+const [postsPerPage] = useState(4);
+
+
+
+  // Get current posts
+  const indexOfLastPost = currentPage * postsPerPage;
+  const indexOfFirstPost = indexOfLastPost - postsPerPage;
+  const currentPosts = Favourites.slice(indexOfFirstPost, indexOfLastPost);
+
+
+  // Change page
+  const paginate = pageNumber => setCurrentPage(pageNumber);
+
+  const pageNumbers = [];
+
+  for (let i = 1; i <= Math.ceil(Favourites.length / postsPerPage); i++) {
+      pageNumbers.push(i);
+  }
 
 
 
@@ -196,6 +227,7 @@ console.log(Favourites)
           <div className="card-body">
             <div className="d-flex flex-column align-items-center text-center"> <br /> <br />
               <img src={inputs.img} alt="Admin" className="rounded-circle p-1 bg-primary" width={110} />
+              
               <div className="mt-3">
                 <br />
                 
@@ -220,10 +252,14 @@ console.log(Favourites)
   </div>
 </div>
 
-
+<div className='modal-btn'>
+   <button onClick={() => setIsOpen(true)}>Your Posts</button>
+<Modal ProfilePosts={ProfilePosts} open={isOpen} onClose={() => setIsOpen(false)}/>
+</div>
+{/* 
 <h1 style={{color:'#fff',textAlign:'center',marginRight:'50px'}}>Your Posts</h1>
-<div style={{display:'flex',flexWrap:'wrap'}}>
- 
+<div style={{display:'flex',flexWrap:'wrap',marginLeft:'10%'}}>
+
 {ProfilePosts.length > 0
             
             ? ProfilePosts.map((comment)=>
@@ -242,13 +278,13 @@ console.log(Favourites)
         </div>
       
         ) : null}
-</div>
+</div> */}
 <div>
 <h1 style={{color:'#fff',textAlign:'center',marginTop:'10vh'}}>Your Favourites</h1>
-<div style={{marginBottom:'5vh', display:'flex', }}>
-{Favourites.length > 0
+<div style={{marginBottom:'5vh', display:'flex',marginLeft:'10%' }}>
+{currentPosts.length > 0
             
-            ? Favourites.map((fav)=>
+            ? currentPosts.map((fav)=>
 <div>
 <div className="card" style={{width: '18rem',height:'350px',margin:'20px',backgroundColor:'black'}}>
   <img src={fav.game_img} className="card-img-top" alt="..." />
@@ -256,7 +292,7 @@ console.log(Favourites)
     <div style={{height:'100px'}}>
     <h5 className="card-title" style={{color:'#fff'}}>{fav.game_name}</h5>
     </div>
-    <a href="#" className="btn btn-primary" style={{marginBottom:'10px'}}>Go somewhere</a>
+    <button onClick={()=>goGame(fav.game_id)} className="form-control btn btn-light submit px-3" style={{marginBottom:'10px'}}>See The Game</button>
   </div>
 </div>
 
@@ -269,8 +305,15 @@ console.log(Favourites)
 </div>
 </div>
 
-
-
+<ul className='pagination justify-content-center' style={{marginLeft:'0'}}>
+                    {pageNumbers.map(number => (
+                        <li key={number} className='page-item'>
+                            <button onClick={() => paginate(number)} className='page-link'>
+                                {number}
+                            </button>
+                        </li>
+                    ))}
+                </ul>
 
 
 
@@ -280,3 +323,19 @@ console.log(Favourites)
   }
   
   export default Userprofile;
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

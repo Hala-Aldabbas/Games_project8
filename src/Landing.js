@@ -3,6 +3,9 @@ import './Landing.css';
 import 'bootstrap/dist/css/bootstrap.min.css'; 
 import Carousel from 'react-bootstrap/Carousel';
 // import HomePage from './pages/Home/HomePage.component';
+
+import Ytvideo from './ytVideo/ytvideo';
+
 const Landing = () => {
 	return (
 
@@ -72,26 +75,26 @@ const Landing = () => {
       <div className="row">
         <div className="col-md-4">
           <div className="intro-text-box text-box text-white">
-            <div className="top-meta">22.12.2022  /  in <a href>Games</a></div>
+            <div className="top-meta">22.12.2022  /  in <a style={{color:'#c313b7'}} href>Games</a></div>
             <h3>The best online game is out now!</h3>
-            <p>Facing increased wars are heating up. In March, Disney delayed the release date of Obi-Wan Kenobi to May 27 to coincide with the launch of Netflix’s top show, Stranger Things. This on the back of Google’s announcement YouTube Shorts had matched TikTok’s 1.5 billion subscribers in the short-form video market.</p>
-            {/* <a href=" " className="read-more">Read More  <img src="img/icons/double-arrow.png" alt="#" /></a> */}
+            <p>Facing increased wars are heating up. In March, Disney delayed the release date of Obi-Wan Kenobi to May 27 to coincide with the launch of Netflix’s top show, Stranger Things. This on the back of Google’s announcement YouTube Shorts had matched TikTok’s in the short-form video market.</p>
+            <a href="https://theconversation.com/global/topics/gaming-1806" className="read-more">Read More  <img src="img/icons/double-arrow.png" alt="#" /></a>
           </div>
         </div>
         <div className="col-md-4">
           <div className="intro-text-box text-box text-white">
-            <div className="top-meta">22.12.2022  /  in <a href>Playstation</a></div>
+            <div className="top-meta">22.12.2022  /  in <a  style={{color:'#c313b7'}} href>Playstation</a></div>
             <h3>Top 5 best games in november</h3>
             <p>The streaming wars are heating up. In March, Disney delayed the release date of Obi-Wan Kenobi to May 27 to coincide with the launch of Netflix’s top show, Stranger Things. This on the back of Google’s announcement YouTube Shorts had matched TikTok’s 1.5 billion subscribers in the short-form video market.</p>
-            {/* <a href="#" className="read-more">Read More  <img src="img/icons/double-arrow.png" alt="#" /></a> */}
+            <a href="https://theconversation.com/global/topics/gaming-1806" className="read-more">Read More  <img src="img/icons/double-arrow.png" alt="#" /></a>
           </div>
         </div>
         <div className="col-md-4">
           <div className="intro-text-box text-box text-white">
-            <div className="top-meta">22.12.2022  /  in <a href>Reviews</a></div>
+            <div className="top-meta">22.12.2022  /  in <a  style={{color:'#c313b7'}} href>Reviews</a></div>
             <h3>Get this game at a promo price</h3>
             <p>Both Netflix  wars are heating up. In March, Disney delayed the release date of Obi-Wan Kenobi to May 27 to coincide with the launch of Netflix’s top show, Stranger Things. This on the back of Google’s announcement YouTube Shorts had matched TikTok’s 1.5 billion subscribers in the short-form video market.</p>
-            {/* <a href="#" className="read-more">Read More  <img src="img/icons/double-arrow.png" alt="#" /></a> */}
+            <a href="https://theconversation.com/global/topics/gaming-1806" className="read-more">Read More  <img src="img/icons/double-arrow.png" alt="#" /></a>
           </div>
         </div>
       </div>
@@ -200,11 +203,7 @@ const Landing = () => {
                 </ul>
               </div>
             </div>
-            <div className="widget-item">
-              <a href=" " className="add">
-                <img src="./img/add.jpg" alt="" />
-              </a>
-            </div>
+           
           </div>
         </div>
       </div>
@@ -212,28 +211,33 @@ const Landing = () => {
   </section>
   {/* Blog section end */}
   {/* Intro section */}
-  <section className="intro-video-section set-bg  align-items-end " data-setbg><img src="./img/promo-bg.jpg" alt="#"/>
-    <a href="https://www.youtube.com/watch?v=uFsGy5x_fyQ" className="video-play-btn video-popup"><img src="img/icons/solid-right-arrow.png" alt="#" /></a>
-    <div className="">
-      {/* <div className="d0">
-        <h2 >Promo video of the game</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-      </div> */}
-    </div>
+  <section className="my-5 " data-setbg>
+    
+    {/* <img src="./img/promo-bg.jpg" alt="#"/>
+    <a href="https://www.youtube.com/watch?v=RRkKZG1z9PY" className="video-play-btn video-popup"><img src="img/icons/solid-right-arrow.png" alt="#" /></a>
+   */}
+
+<div className="ratio ratio-21x9" >
+  <iframe src="https://www.youtube.com/embed/a8Hjq0RxiD0" title="YouTube video" allowFullScreen />
+</div>
   </section>
   {/* Intro section end */}
+
+  <section >
+  <Ytvideo />
+  </section>
   {/* Featured section */}
   <section className="featured-section">
-    <div className="featured-bg set-bg" data-setbg /><img src="img/featured-bg.jpg" className="featured-bg set-bg"  alt="#"/>
+    <div className="featured-bg set-bg" data-setbg /><img src="img/featured-bg.jpg"  style={{height:'100vh'}} className="featured-bg set-bg"  alt="#"/>
     <div className="featured-box">
       <div className="text-box">
-        <div className="top-meta">22.12.2022  /  in <a href>Games</a></div>
-        <h3>The game you’ve been waiting  for is out now</h3>
-        <p>There’s a marked difference between a gaming addiction causing aggression or depression, and an already depressed or troubled person turning to games as a form of escapism.
+        <div className="top-meta">22.12.2022  /  in <a  style={{color:'#c313b7'}} href>Games</a></div>
+        <h3  style={{color:'#c313b7'}}>The game you’ve been waiting  for is out now</h3>
+        <h5>There’s a marked difference between a gaming addiction causing aggression or depression, and an already depressed or troubled person turning to games as a form of escapism.
 
 The research tells us gaming has no harmful impacts on healthy young people who don’t have existing mental health problems.
 
-However, negative forces in life may drive some people towards gaming as a way to cope. Specifically, people who already feel a sense of self blame, loss of control in life or social disengagement are more likely to turn to gaming as a coping mechanism – not unlike how some may turn to drugs, alcohol or gambling.</p>
+However, negative forces in life may drive some people towards gaming as a way to cope. Specifically, people who already feel a sense of self blame, loss of control in life or social disengagement are more likely to turn to gaming as a coping mechanism – not unlike how some may turn to drugs, alcohol or gambling.</h5>
    
       </div>
     </div>

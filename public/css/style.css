@@ -379,13 +379,13 @@ ol {
 }
 
 .main-menu li a:after {
-	position: absolute;
+	/* position: absolute; */
 	content: "";
 	width: 20px;
 	height: 20px;
 	right: 0;
 	top: 1px;
-	background-image: url("../img/icons/arrow-down.png");
+	/* background-image: url("../img/icons/arrow-down.png"); */
 	background-repeat: no-repeat;
 	background-position: right center;
 }
@@ -399,9 +399,9 @@ ol {
 	color: #b01ba5;
 }
 
-.main-menu li a:hover:after {
+/* .main-menu li a:hover:after {
 	background-image: url("../img/icons/arrow-down-color.png");
-}
+} */
 
 .main-menu li a:hover i {
 	color: #b01ba5;
@@ -612,10 +612,11 @@ ol {
 }
 
 .text-box p {
-	font-size: 15px;
-	font-weight: 500;
-	color: #68647d;
-	margin-bottom: 35px;
+	font-size: 17px;
+    font-weight: 500;
+    color: #faf9fc;
+    margin-bottom: 35px;
+
 }
 
 .text-box .read-more {

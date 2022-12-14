@@ -1,0 +1,36 @@
+/* button {
+  margin-bottom: 20px;
+}
+
+div.video {
+  margin-bottom: 20px;
+}
+
+button, button:not(:focus){
+  background-color: #03A9F4;
+  border: none;
+  padding: 15px 25px;
+  text-transform: uppercase;
+  color: white;
+  font-weight: 700;
+  border-radius: 3px;
+  transition-property: opacity;
+  transition-duration: 2s;
+  opacity: .6;
+  margin-left: 650px;
+}
+button:hover, button:focus{
+  background-color: #0074a9;
+  outline: none;
+  opacity: .8;
+  transition-duration: .3s;
+  transition-delay: .1s;
+} */
+
+.hh{
+  margin-bottom: 40px;
+  margin-left:550px;
+}
+.video{
+  margin-left:80px;
+}
